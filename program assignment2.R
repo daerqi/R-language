@@ -1,6 +1,6 @@
 # R-language
-quiz
->makeCacheMatrix <- function(x=matrix(),...){
+>makeCacheMatrix <- function(x=matrix(),...){ 
+##This function creates a special "matrix" object that can cache its inverse
         m<-NULL
         set<-function(y){
                 x<<-y 
@@ -13,6 +13,7 @@ quiz
 }
 
 >cacheSolve <- function(x, ...) {
+##This function computes the inverse of the special "matrix" returned by makeCacheMatrix above.
         m <- x$getM()
         if(!is.null(m)){
                 message("TO cached data")
